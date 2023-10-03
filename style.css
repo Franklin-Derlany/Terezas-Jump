@@ -1,0 +1,204 @@
+/* SELETORES GLOBAIS */
+@font-face {
+    font-family: 'SuperMario';
+    src: url('SuperMario256.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* TEXTO */
+h1 {
+    font-family: 'SuperMario', sans-serif;
+    text-align: center;
+    font-size: 30px;
+    text-shadow: 5px 7px 0px #000;
+    line-height: 40px;
+
+    position: relative;
+    top: 30%;
+    margin: auto;
+    z-index: 2;
+}
+
+span.segundo-nome {
+font-size: 70px;
+}
+
+span.azul {
+    color: #239DDC;
+}
+span.amarelo {
+    color: #F3D724;
+}
+
+span.vermelho {
+    color: #EB281E;
+}
+
+span.verde {
+    color: #46B73D;
+}
+
+/* SESSÃO GAME-BOARD */
+.game-board {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+
+    position: relative;
+    overflow: hidden;
+}
+/* FIM DA SESSÃO GAME-BOARD */
+
+/* SESSÃO NUVEM */
+.nuvem {
+    width: 450px;
+    position: absolute;
+    top: 15px;
+    animation: nuvem-animation linear infinite 20s;
+    z-index: 1;
+}
+
+@keyframes nuvem-animation {
+    from {
+        right: -450px;
+    }
+    to {
+        right: 100%;
+    }
+}
+/* FIM DA SESSÃO NUVEM */
+
+/* SESSÃO ANA */
+.ana {
+    position: absolute;
+    bottom: 0;
+    width: 160px;
+    z-index: 3;
+}
+
+.jump {
+    animation: jump infinite 800ms ease-out;
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 150px;
+    }
+
+    50% {
+        bottom: 150px;
+    }
+
+    60% {
+        bottom: 150px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+/*FIM DA SESSÃO ANA */
+
+/*GRAMA */
+.grama {
+    width: 100%;
+    height: 35px;
+    background-color: #46B73D;
+
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+
+/* SESSÃO TUBO */
+.tubo {
+    position: absolute;
+    right: -100px;
+    bottom: 0;
+
+    width: 100px;
+}
+
+.tubo-animation {
+    animation: tubo-animation linear infinite 1.5s;
+}
+
+@keyframes tubo-animation {
+    from {
+        right: -100px;
+    }
+    to {
+        right: 100%;
+    }
+}
+/* FIM DA SESSÃO TUBO */
+
+/* BOTÃO */
+
+button {
+    background: green;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+
+    border: none;
+    border-radius: 8px;
+    padding: 1rem;
+
+    position: absolute;
+    right: 50vw;
+    top: 50vh;
+    cursor: pointer;
+    z-index: 1;
+}
+
+button:hover {
+    background-color: transparent;
+    border: 2px solid green;
+    color: green;
+}
+
+/*FIM DO BOTÃO */
+
+
+/* GAME OVER */
+.game-over {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.322);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+
+    top: 0;
+    left: 0;
+}
+
+.game-over h1 {
+    font-size: 3rem;
+    color: red;
+    text-align: center;
+    margin-top: 13rem;
+    text-shadow: none;
+}
+/* FIM DO GAME OVER */
+
+
+
+
+
